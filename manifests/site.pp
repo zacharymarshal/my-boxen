@@ -59,8 +59,8 @@ node default {
   include nginx
 
   # php modules
-  include mysql # mysql was required for me to install php :'(
-  include php::composer
+  # include mysql # mysql was required for me to install php :'(
+  # include php::composer
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -74,10 +74,10 @@ node default {
   ruby::version { '2.1.2': }
 
   # php versions
-  php::version { '5.5.25': }
-  class { 'php::global':
-    version => '5.5.25'
-  }
+  # php::version { '5.5.25': }
+  # class { 'php::global':
+  #   version => '5.5.25'
+  # }
 
   # common, useful packages
   package {
