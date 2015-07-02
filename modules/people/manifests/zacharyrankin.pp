@@ -13,14 +13,12 @@ class people::zacharyrankin {
   package { '1password':      provider => 'brewcask' }
   package { 'atom':           provider => 'brewcask' }
   package { 'battle-net':     provider => 'brewcask' }
-  package { 'dash':           provider => 'brewcask' }
   package { 'dropbox':        provider => 'brewcask' }
   package { 'github':         provider => 'brewcask' }
   package { 'google-chrome':  provider => 'brewcask' }
   package { 'phpstorm':       provider => 'brewcask' }
   package { 'postgres':       provider => 'brewcask' }
   package { 'spotify':        provider => 'brewcask' }
-  package { 'the-unarchiver': provider => 'brewcask' }
 
   ## iterm2
 
