@@ -58,22 +58,26 @@ node default {
   include hub
   include nginx
 
+  # php modules
+  include mysql # mysql was required for me to install php :'(
+  include php::composer
+
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
   }
 
   # node versions
-  nodejs::version { 'v0.6': }
-  nodejs::version { 'v0.8': }
-  nodejs::version { 'v0.10': }
+  nodejs::version { 'v0.12.5': }
 
   # default ruby versions
-  ruby::version { '1.9.3': }
-  ruby::version { '2.0.0': }
-  ruby::version { '2.1.0': }
-  ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
+
+  # php versions
+  php::version { '5.5.25': }
+  class { 'php::global':
+    version => '5.5.25'
+  }
 
   # common, useful packages
   package {
