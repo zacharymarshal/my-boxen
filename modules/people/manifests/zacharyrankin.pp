@@ -13,7 +13,6 @@ class people::zacharyrankin {
   package { '1password':      provider => 'brewcask' }
   package { 'atom':           provider => 'brewcask' }
   package { 'battle-net':     provider => 'brewcask' }
-  package { 'caffine':        provider => 'brewcask' }
   package { 'dash':           provider => 'brewcask' }
   package { 'dropbox':        provider => 'brewcask' }
   package { 'github':         provider => 'brewcask' }
