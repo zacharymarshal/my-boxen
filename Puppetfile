@@ -75,6 +75,9 @@ github "wget", "1.0.1"
 
 github "osx", "2.8.0"
 
+mod "property_list_key", "0.2.1", :github_tarball => "glarizza/puppet-property_list_key"
+
 # application modules
 
 github "sublime_text", "1.1.0" # didn't work with brewcask need brewcask/versions
+github "iterm2"      , "1.2.5"
